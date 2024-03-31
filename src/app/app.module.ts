@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
@@ -22,10 +22,12 @@ import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
 import {MatFormField, MatPrefix} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {FlexLayoutModule} from "@angular/flex-layout";
-import { AnalyticsComponent } from './pages/analytics/analytics.component';
-import { MainLayoutComponent } from './pages/mainlayout/main-layout.component';
-import { SignInComponent } from './pages/signin/sign-in.component';
+import {AnalyticsComponent} from './pages/analytics/analytics.component';
+import {MainLayoutComponent} from './pages/mainlayout/main-layout.component';
+import {SignInComponent} from './pages/signin/sign-in.component';
 import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgxSpinnerModule} from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -57,11 +59,14 @@ import {HttpClientModule} from "@angular/common/http";
     MatInput,
     FlexLayoutModule,
     MatPrefix,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule
   ],
   providers: [
     provideAnimationsAsync()
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {
