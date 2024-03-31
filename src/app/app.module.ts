@@ -22,6 +22,10 @@ import {MatPaginator, MatPaginatorModule} from "@angular/material/paginator";
 import {MatFormField, MatPrefix} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { AnalyticsComponent } from './pages/analytics/analytics.component';
+import { MainLayoutComponent } from './pages/mainlayout/main-layout.component';
+import { SignInComponent } from './pages/signin/sign-in.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MainNavComponent,
     SideNavComponent,
     DashboardComponent,
-    SubmissionComponent
+    SubmissionComponent,
+    AnalyticsComponent,
+    MainLayoutComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +57,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatInput,
     FlexLayoutModule,
     MatPrefix,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync()
