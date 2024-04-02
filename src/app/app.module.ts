@@ -28,6 +28,10 @@ import {SignInComponent} from './pages/signin/sign-in.component';
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxSpinnerModule} from "ngx-spinner";
+import {FormsModule} from "@angular/forms";
+import {MonacoEditorModule} from "ngx-monaco-editor-v2";
+import {AngularSplitModule} from "angular-split";
+import {CodeShareService} from "./services/code-share.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +42,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
     SubmissionComponent,
     AnalyticsComponent,
     MainLayoutComponent,
-    SignInComponent
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,10 +65,14 @@ import {NgxSpinnerModule} from "ngx-spinner";
     MatPrefix,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    FormsModule,
+    MonacoEditorModule.forRoot(),
+    AngularSplitModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    CodeShareService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

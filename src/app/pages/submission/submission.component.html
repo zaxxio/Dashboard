@@ -1,14 +1,13 @@
 <h1>Submission</h1>
 <div class="mat-elevation-z1">
   <div>
-    <mat-form-field appearance="fill" style="width: 100%;">
+    <mat-form-field appearance="fill" style="width: 100%;" subscriptSizing="dynamic">
       <input matInput placeholder="Filter" style="font-size: 20px;" (keyup)="applyFilter($event)">
       <mat-icon matIconPrefix>search</mat-icon>
     </mat-form-field>
   </div>
   <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z1">
-
-
+    
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 

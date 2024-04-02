@@ -13,11 +13,11 @@ export class AppComponent {
   constructor(private router: Router, private spinner: NgxSpinnerService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        spinner.show();
+        //spinner.show();
         console.log("Navigation Start");
       } else if (event instanceof NavigationEnd) {
         setTimeout(() => {
-          spinner.hide()
+          //spinner.hide()
         }, 300)
         console.log("Navigation End");
       }
