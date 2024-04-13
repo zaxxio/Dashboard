@@ -7,5 +7,5 @@ import {Component, computed, signal} from '@angular/core';
 })
 export class MainNavComponent {
   collapsed = signal(false);
-  sideNavWidth = computed(() => this.collapsed() ? '60px' : '250px');
+  sideNavWidth = computed(() => this.collapsed() ? '65px' : '250px');
 }

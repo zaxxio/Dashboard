@@ -31,7 +31,6 @@ import {NgxSpinnerModule} from "ngx-spinner";
 import {FormsModule} from "@angular/forms";
 import {MonacoEditorModule} from "ngx-monaco-editor-v2";
 import {AngularSplitModule} from "angular-split";
-import {CodeShareService} from "./services/code-share.service";
 
 @NgModule({
   declarations: [
@@ -72,7 +71,6 @@ import {CodeShareService} from "./services/code-share.service";
   ],
   providers: [
     provideAnimationsAsync(),
-    CodeShareService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
